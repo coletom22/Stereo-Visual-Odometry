@@ -1,9 +1,9 @@
 # Stereo-Visual-Odometry
-A Python implementation of a classical stereo visual odoemtry pipeline using the KITTI dataset.
+A Python implementation of a classical stereo visual odometry pipeline using the KITTI dataset.
 
 An article I wrote describing this system in greater depth can be found [here]()
 
-Stereo Visual Odometry is the process of understanding the movements of a vehicle based on images taken by cameras mounted to the car. The system involves 3 key steps:
+Stereo Visual Odometry is the process of understanding the movements of a vehicle based on images taken by cameras mounted on the car. The system involves 3 key steps:
 1. Using stereo pairs of images to calculate depth
 2. Tracking features through subsequent frames
 3. Calculating the transformation from one image to the next based on the depth info + features
@@ -24,7 +24,7 @@ Stereo Visual Odometry is the process of understanding the movements of a vehicl
 ### 2: Install dependencies
 Run the following in a terminal with your virtual environment active
 `pip install -r requirements.txt`
-### 3: Download the KITTI datset
+### 3: Download the KITTI dataset
 Go to this [link](https://www.cvlibs.net/datasets/kitti/eval_odometry.php) to download 3 (+1 optional) datasets from KITTI:
 1. Grayscale (22GB)
 2. Calibration files (1MB)
@@ -73,6 +73,8 @@ Another issue with this relatively simple approach is the assumption that the ob
     <img src="/assets/seq_07.png" alt="Sequence 07 Trajectory" width="500">
 </p>
 
+### How to Improve
+Simultaneous Localization and Mapping (SLAM) is a great technique for boosting our accuracy on this dataset. It involves loop detection/closure and pose graph optimization. In doing so, it is able to correct mistakes made in previous pose estimations and improve overall accuracy. I will post an implementation + explanation soon.
 
 ## Credit + Thanks
-Much of the code was derived from Nate Cibik and his tutorial series on [YouTube](https://www.youtube.com/watch?v=SXW0CplaTTQ&list=PLrHDCRerOaI9HfgZDbiEncG5dx7S3Nz6X). He does a fantastic job describing the fundamentals of visual odometry and I would highly recommend watching his breakdown if you prefer going step-by-step through a notebook. 
+Much of the code was derived from Nate Cibik and his tutorial series on [YouTube](https://www.youtube.com/watch?v=SXW0CplaTTQ&list=PLrHDCRerOaI9HfgZDbiEncG5dx7S3Nz6X). He does a fantastic job describing the fundamentals of visual odometry, and I would highly recommend watching his breakdown if you prefer going step-by-step through a notebook. 
