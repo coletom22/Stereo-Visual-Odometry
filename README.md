@@ -53,16 +53,16 @@ Run `python vo.py` to visualize the pipeline on sequence 00 (as configured in ma
 
 ## Results + Room for Improvement
 Using classical visual odometry results in relatively impressive trajectory estimations considering we are not performing pose graph optimizations or even using LiDAR!
-![Sequence_03](/assets/seq_03.png)
-![Sequence_09](/assets/seq_09.png)\
+<img src="/assets/seq_03.png" alt="Sequence 03 Trajectory" width="500">
+<img src="/assets/seq_09.png" alt="Sequence 09 Trajectory" width="500">
 
 ### Drift
 However, as mentioned earlier, this approach is prone to drift. This is due to our errors compounding over time and not performing any corrective measures (like PGO). This is well demonstrated in sequence 00
-![Sequence_00](/assets/seq_00.png)\
+![Sequence_00](/assets/seq_00.png)
 
 ### Moving Objects in Frame
 Another issue with this relatively simple approach is the assumption that the objects in our images are stationary. This assumption poses a challenge to our system when other cars are driving in the scene (or any object is moving for that matter). An example of this is in sequence 07. At the bottom left of the diagram our car is sitting idle, but cross-traffic drives in front of it. This causes the unintended shift horizontally.
-![Sequence_07](/assets/seq_07.png)\
+![Sequence_07](/assets/seq_07.png)
 
 
 ## Credit + Thanks
