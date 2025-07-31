@@ -1,7 +1,7 @@
 # Stereo-Visual-Odometry
 A Python implementation of a classical stereo visual odometry pipeline using the KITTI dataset.
 
-An article I wrote describing this system in greater depth can be found [here]()
+An article I wrote describing this system in greater depth can be found [here](https://medium.com/@coletom22/an-intuitive-approach-to-stereo-visual-odometry-kitti-e84ad6402bbc)
 
 Stereo Visual Odometry is the process of understanding the movements of a vehicle based on images taken by cameras mounted on the car. The system involves 3 key steps:
 1. Using stereo pairs of images to calculate depth
